@@ -58,7 +58,7 @@ display_label.pack(pady=10)
 lives_label = tk.Label(window, text=f"Lives left: {lives}", font=("Arial", 14))
 lives_label.pack(pady=5)
 
-guess_entry = tk.Entry(window, font=("Arial", 16), width=1)  # Limit the width to 3 characters
+guess_entry = tk.Entry(window, font=("Arial", 16), width=1)  # Limit the width to 1 characters
 guess_entry.pack(pady=10)
 guess_entry.bind("<Return>", check_guess)  # Bind the Enter key to the check_guess function
 
