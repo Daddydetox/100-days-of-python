@@ -68,6 +68,9 @@ while programRunning:
     while True:
         operation = validateOperator(input("Pick an operation: "))
         secondNum = validateFloat(input("Enter the second number: "))
+        if operation == "/" and secondNum == 0:
+            print("Cannot divide by zero. Try again.")
+            continue
         calculation = calculateResults(firstNum, secondNum, operation)
         print(f"{firstNum} {operation} {secondNum} = {calculation}")
 
