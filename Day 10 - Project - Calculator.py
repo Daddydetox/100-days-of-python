@@ -61,7 +61,8 @@ def calculateResults(num1, num2, operator):
 
 
 print(logo)
-while True:
+programRunning = True
+while programRunning:
     firstNum = validateFloat(input("Enter the first number: "))
     print("+\n-\n/\n*")
     while True:
@@ -70,11 +71,14 @@ while True:
         calculation = calculateResults(firstNum, secondNum, operation)
         print(f"{firstNum} {operation} {secondNum} = {calculation}")
 
-        continueCalculation = input(f"Type 'y' to continue calculating with {calculation}, or type 'n' to start a new "
-                                    f"calculation: ").lower()
+        continueCalculation = input(f"Type 'y' to continue calculating with {calculation}, type 'n' to start a new "
+                                    f"calculation, or type anything else to quit: ").lower()
         if continueCalculation == "y":
             firstNum = calculation
             continue
+        elif continueCalculation == "n":
+            break
         else:
+            programRunning = False
             break
 
