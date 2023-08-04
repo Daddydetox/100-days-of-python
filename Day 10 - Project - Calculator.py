@@ -33,8 +33,6 @@ def mul(num1, num2):
 
 
 def validateFloat(num):
-    if num.lower() == "q":
-        return num
     while True:
         try:
             return float(num)
@@ -64,9 +62,7 @@ def calculateResults(num1, num2, operator):
 
 print(logo)
 while True:
-    firstNum = validateFloat(input("Enter the first number (or Q to quit): "))
-    if firstNum == "q":
-        break
+    firstNum = validateFloat(input("Enter the first number: "))
     print("+\n-\n/\n*")
     while True:
         operation = validateOperator(input("Pick an operation: "))
